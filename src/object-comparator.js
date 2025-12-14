@@ -1,4 +1,4 @@
-import { AbsComparator } from "./abs-comparator";
+import { AbsComparator } from "./abs-comparator.js";
 
 export class ObjectComparator extends AbsComparator {
   canHandle(value) {

@@ -1,4 +1,4 @@
-import { AbsComparator } from "./abs-comparator";
+import { AbsComparator } from "./abs-comparator.js";
 
 describe("Abstract class tests", () => {
   let absComparator;

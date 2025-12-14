@@ -83,8 +83,6 @@ const config = {
   //   "cjs",
   //   "jsx",
   //   "ts",
-  //   "mts",
-  //   "cts",
   //   "tsx",
   //   "json",
   //   "node"
@@ -93,7 +91,7 @@ const config = {
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   // moduleNameMapper: {},
 
-  // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
+  // An array of regexp pattern strings that are matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
 
   // Activates notifications for test results
@@ -178,7 +176,7 @@ const config = {
   // A map from regular expressions to paths to transformers
   // transform: undefined,
 
-  // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
+  // An array of regexp pattern strings that are matched against all source file paths before all modules will skip transformation
   // transformIgnorePatterns: [
   //   "\\\\node_modules\\\\",
   //   "\\.pnp\\.[^\\\\]+$"

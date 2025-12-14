@@ -1,4 +1,4 @@
-import { ArrayComparator } from "./array-comparator";
+import { ArrayComparator } from "./array-comparator.js";
 
 describe("Array Comparator tests", () => {
   let arrayComparator;

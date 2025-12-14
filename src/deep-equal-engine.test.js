@@ -1,7 +1,7 @@
-import { DeepEqualEngine } from "./deep-equal-engine";
-import { PrimitiveComparator } from "./primitive-comparator";
-import { ArrayComparator } from "./array-comparator";
-import { ObjectComparator } from "./object-comparator";
+import { DeepEqualEngine } from "./deep-equal-engine.js";
+import { PrimitiveComparator } from "./primitive-comparator.js";
+import { ArrayComparator } from "./array-comparator.js";
+import { ObjectComparator } from "./object-comparator.js";
 
 describe("Deep Equal Engine tests", () => {
   let engine;

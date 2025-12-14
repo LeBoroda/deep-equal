@@ -1,4 +1,4 @@
-import { PrimitiveComparator } from "./primitive-comparator";
+import { PrimitiveComparator } from "./primitive-comparator.js";
 
 describe("Primitive values comparator test", () => {
   let primComparator;

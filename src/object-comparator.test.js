@@ -1,4 +1,4 @@
-import { ObjectComparator } from "./object-comparator";
+import { ObjectComparator } from "./object-comparator.js";
 
 describe("Object Comparator tests", () => {
   let objectComparator;

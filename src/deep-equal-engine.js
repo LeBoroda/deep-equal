@@ -1,6 +1,6 @@
-import { PrimitiveComparator } from "./primitive-comparator";
-import { ArrayComparator } from "./array-comparator";
-import { ObjectComparator } from "./object-comparator";
+import { PrimitiveComparator } from "./primitive-comparator.js";
+import { ArrayComparator } from "./array-comparator.js";
+import { ObjectComparator } from "./object-comparator.js";
 
 export class DeepEqualEngine {
   constructor() {
