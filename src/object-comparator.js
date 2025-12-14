@@ -1,4 +1,4 @@
-import {AbsComparator} from "./abs-comparator";
+import { AbsComparator } from "./abs-comparator";
 
 export class ObjectComparator extends AbsComparator {
   canHandle(value) {
@@ -18,7 +18,7 @@ export class ObjectComparator extends AbsComparator {
     }
 
     return keysA.every(
-      (key) => keysB.includes(key) && context.deepEqual(a[key], b[key])
+      (key) => keysB.includes(key) && context.deepEqual(a[key], b[key]),
     );
   }
 }
