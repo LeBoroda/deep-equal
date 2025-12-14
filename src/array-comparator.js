@@ -1,12 +1,11 @@
 import {AbsComparator} from "./abs-comparator";
-import context from "node:assert";
 
 export class ArrayComparator extends AbsComparator {
   canHandle(value) {
     return Array.isArray(value);
   }
 
-  compare(a, b) {
+  compare(a, b, context) {
     if (!Array.isArray(b) || a.length !== b.length) {
       return false;
     }
