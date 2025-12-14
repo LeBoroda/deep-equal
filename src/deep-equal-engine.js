@@ -1,6 +1,6 @@
-import {PrimitiveComparator} from "./primitive-comparator";
-import {ArrayComparator} from "./array-comparator";
-import {ObjectComparator} from "./object-comparator";
+import { PrimitiveComparator } from "./primitive-comparator";
+import { ArrayComparator } from "./array-comparator";
+import { ObjectComparator } from "./object-comparator";
 
 export class DeepEqualEngine {
   constructor() {
@@ -13,15 +13,15 @@ export class DeepEqualEngine {
   }
 
   deepEqual(a, b) {
-    if(typeof a === 'object' && a !== null) {
-      if(this.visited.has(a)) {
-        return a===b;
+    if (typeof a === "object" && a !== null) {
+      if (this.visited.has(a)) {
+        return a === b;
       }
       this.visited.add(a);
     }
     const comparator = this.findComparator(a);
 
-    if(!comparator) {
+    if (!comparator) {
       throw new Error(`Cannot find comparator for ${typeof a}`);
     }
 
@@ -29,6 +29,6 @@ export class DeepEqualEngine {
   }
 
   findComparator(value) {
-    return this.comparators.find((comparator)=> comparator.canHandle(value))
+    return this.comparators.find((comparator) => comparator.canHandle(value));
   }
 }
