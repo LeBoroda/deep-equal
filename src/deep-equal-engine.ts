@@ -37,25 +37,7 @@ export class DeepEqualEngine {
       return a === b;
     }
 
-    if (comparator instanceof PrimitiveComparator) {
-      return comparator.compare(a as PrimitiveType, b as PrimitiveType);
-    } else if (comparator instanceof DateComparator) {
-      return comparator.compare(a as Date, b as Date);
-    } else if (comparator instanceof ArrayComparator) {
-      if (Array.isArray(a) && Array.isArray(b)) {
-        return comparator.compare(a, b, this);
-      }
-      return false;
-    } else {
-      if (a && typeof a === 'object' && b && typeof b === 'object') {
-        return comparator.compare(
-          a as Record<string, unknown>,
-          b as Record<string, unknown>,
-          this,
-        );
-      }
-      return false;
-    }
+		return comparator.compare(a, b, this);
   }
 
   findComparator(value: unknown): ComparatorType | undefined {
