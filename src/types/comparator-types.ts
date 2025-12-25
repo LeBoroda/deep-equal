@@ -1,10 +1,3 @@
-import { PrimitiveComparator } from '../primitive-comparator.js';
-import { ArrayComparator } from '../array-comparator.js';
-import { DateComparator } from '../date-comparator.js';
-import { ObjectComparator } from '../object-comparator.js';
+import type { IComparator } from '../interfaces/i-comparator';
 
-export type ComparatorType =
-  | PrimitiveComparator
-  | ArrayComparator
-  | DateComparator
-  | ObjectComparator;
+export type ComparatorType = IComparator;
