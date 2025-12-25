@@ -3,7 +3,6 @@ import { ArrayComparator } from './array-comparator.js';
 import { ObjectComparator } from './object-comparator.js';
 import { DateComparator } from './date-comparator.js';
 import type { ComparatorType } from './types/comparator-types';
-import type { PrimitiveType } from './types/primitive-types';
 
 export class DeepEqualEngine {
   comparators: ComparatorType[];
@@ -37,7 +36,7 @@ export class DeepEqualEngine {
       return a === b;
     }
 
-		return comparator.compare(a, b, this);
+    return comparator.compare(a, b, this);
   }
 
   findComparator(value: unknown): ComparatorType | undefined {
