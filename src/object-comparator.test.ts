@@ -1,8 +1,8 @@
 import { ObjectComparator } from './object-comparator.js';
 
 describe('Object Comparator tests', () => {
-  let objectComparator;
-  let mockContext;
+  let objectComparator: ObjectComparator;
+  let mockContext:any;
 
   beforeEach(() => {
     objectComparator = new ObjectComparator();
@@ -14,8 +14,8 @@ describe('Object Comparator tests', () => {
   });
 
   it('should handle objects', () => {
-    expect(objectComparator.canHandle(Object({ a: 'test' }))).toBeTruthy();
-    expect(objectComparator.canHandle(Array([1, 2, 3]))).toBeFalsy();
+    expect(objectComparator.canHandle({ a: 'test' })).toBeTruthy();
+    expect(objectComparator.canHandle([1, 2, 3])).toBeFalsy();
   });
 
   it('should mock context', () => {
