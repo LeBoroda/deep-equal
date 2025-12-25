@@ -1,13 +1,12 @@
 import { AbsComparator } from './abs-comparator.js';
-
-type Primitive = string | symbol | number | boolean | null | undefined | BigInt;
+import type {PrimitiveType} from "./types/primitive-types";
 
 export class PrimitiveComparator extends AbsComparator {
   canHandle(value : unknown): boolean {
     return value == null || typeof value !== 'object';
   }
 
-  compare(a : Primitive, b :Primitive) : boolean {
+  compare(a : PrimitiveType, b :PrimitiveType) : boolean {
     return a === b;
   }
 }
