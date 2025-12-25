@@ -2,7 +2,7 @@ import { AbsComparator } from './abs-comparator.js';
 import type {DeepEqualEngine} from "./deep-equal-engine.js";
 
 export class ArrayComparator extends AbsComparator {
-  canHandle(value : unknown) {
+  canHandle(value : unknown): boolean {
     return Array.isArray(value);
   }
 
@@ -10,6 +10,6 @@ export class ArrayComparator extends AbsComparator {
     if (!Array.isArray(b) || a.length !== b.length) {
       return false;
     }
-    return a.every((item, index) => context.deepEqual(item, b[index]));
+    return a.every((item: unknown, index : number) : boolean => context.deepEqual(item, b[index]));
   }
 }
