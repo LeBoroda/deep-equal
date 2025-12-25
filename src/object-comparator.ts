@@ -1,5 +1,5 @@
 import { AbsComparator } from './abs-comparator.js';
-import type {DeepEqualEngine} from "./deep-equal-engine";
+import type {DeepEqualEngine} from "./deep-equal-engine.js";
 
 export class ObjectComparator extends AbsComparator {
   canHandle(value:unknown):boolean {
