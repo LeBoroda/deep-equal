@@ -1,5 +1,5 @@
 export class AbsComparator {
-  compare(a:unknown, b:unknown) {
+  compare(a:unknown, b:unknown, context?:unknown) {
     throw new Error('Override compare() method');
   }
 

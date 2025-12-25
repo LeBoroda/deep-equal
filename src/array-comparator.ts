@@ -1,11 +1,12 @@
 import { AbsComparator } from './abs-comparator.js';
+import type {DeepEqualEngine} from "./deep-equal-engine.js";
 
 export class ArrayComparator extends AbsComparator {
-  canHandle(value) {
+  canHandle(value : unknown) {
     return Array.isArray(value);
   }
 
-  compare(a, b, context) {
+  compare(a: unknown[], b: unknown[], context : DeepEqualEngine): boolean {
     if (!Array.isArray(b) || a.length !== b.length) {
       return false;
     }

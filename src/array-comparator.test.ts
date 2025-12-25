@@ -1,8 +1,8 @@
 import { ArrayComparator } from './array-comparator.js';
 
 describe('Array Comparator tests', () => {
-  let arrayComparator;
-  let mockContext;
+  let arrayComparator: ArrayComparator;
+  let mockContext: any;
   beforeEach(() => {
     arrayComparator = new ArrayComparator();
     mockContext = { deepEqual: jest.fn() };
