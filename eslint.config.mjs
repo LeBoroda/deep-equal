@@ -27,6 +27,14 @@ export default defineConfig([
     rules: {
       semi: ['error', 'always'],
       'no-useless-escape': ['error', { allowRegexCharacters: ['-'] }],
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+        },
+      ],
     },
   },
   {
