@@ -1,7 +1,7 @@
-import { PrimitiveComparator } from "./primitive-comparator.js";
-import { ArrayComparator } from "./array-comparator.js";
-import { ObjectComparator } from "./object-comparator.js";
-import {DateComparator} from "./date-comparator.js";
+import { PrimitiveComparator } from './primitive-comparator.js';
+import { ArrayComparator } from './array-comparator.js';
+import { ObjectComparator } from './object-comparator.js';
+import { DateComparator } from './date-comparator.js';
 
 export class DeepEqualEngine {
   constructor() {
@@ -15,7 +15,7 @@ export class DeepEqualEngine {
   }
 
   deepEqual(a, b) {
-    if (typeof a === "object" && a !== null) {
+    if (typeof a === 'object' && a !== null) {
       if (this.visited.has(a)) {
         return a === b;
       }

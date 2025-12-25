@@ -1,12 +1,12 @@
-import { AbsComparator } from "./abs-comparator.js";
+import { AbsComparator } from './abs-comparator.js';
 
 export class ObjectComparator extends AbsComparator {
   canHandle(value) {
-    return value != null && typeof value === "object" && !Array.isArray(value);
+    return value != null && typeof value === 'object' && !Array.isArray(value);
   }
 
   compare(a, b, context) {
-    if (typeof b !== "object" || b == null || Array.isArray(b)) {
+    if (typeof b !== 'object' || b == null || Array.isArray(b)) {
       return false;
     }
 

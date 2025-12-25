@@ -1,18 +1,18 @@
-import { AbsComparator } from "./abs-comparator.js";
+import { AbsComparator } from './abs-comparator.js';
 
-describe("Abstract class tests", () => {
+describe('Abstract class tests', () => {
   let absComparator;
   beforeEach(() => {
     absComparator = new AbsComparator();
   });
-  it("should throw error if compare() is not overridden", () => {
+  it('should throw error if compare() is not overridden', () => {
     expect(() => absComparator.compare(2, 3)).toThrow(
-      "Override compare() method",
+      'Override compare() method',
     );
   });
-  it("should throw error if canHandle() is not overridden", () => {
-    expect(() => absComparator.canHandle("value")).toThrow(
-      "Override canHandle() method",
+  it('should throw error if canHandle() is not overridden', () => {
+    expect(() => absComparator.canHandle('value')).toThrow(
+      'Override canHandle() method',
     );
   });
 });

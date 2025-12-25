@@ -1,6 +1,6 @@
-import { ArrayComparator } from "./array-comparator.js";
+import { ArrayComparator } from './array-comparator.js';
 
-describe("Array Comparator tests", () => {
+describe('Array Comparator tests', () => {
   let arrayComparator;
   let mockContext;
   beforeEach(() => {
@@ -12,12 +12,12 @@ describe("Array Comparator tests", () => {
     jest.restoreAllMocks();
   });
 
-  it("should handle arrays", () => {
+  it('should handle arrays', () => {
     expect(arrayComparator.canHandle(Array([1, 2, 3]))).toBeTruthy();
-    expect(arrayComparator.canHandle("test")).toBeFalsy();
+    expect(arrayComparator.canHandle('test')).toBeFalsy();
   });
 
-  it("should mock context", () => {
+  it('should mock context', () => {
     mockContext.deepEqual.mockReturnValueOnce(true).mockReturnValueOnce(true);
     arrayComparator.compare([1, 2], [1, 2], mockContext);
     expect(mockContext.deepEqual).toHaveBeenCalledTimes(2);
@@ -25,13 +25,13 @@ describe("Array Comparator tests", () => {
     expect(mockContext.deepEqual).toHaveBeenNthCalledWith(2, 2, 2);
   });
 
-  it("should stop on first false", () => {
+  it('should stop on first false', () => {
     mockContext.deepEqual.mockReturnValueOnce(false).mockReturnValueOnce(true);
     arrayComparator.compare([1, 2], [2, 2], mockContext);
     expect(mockContext.deepEqual).toHaveBeenCalledTimes(1);
   });
 
-  it("should compare arrays", () => {
+  it('should compare arrays', () => {
     const arr1 = [1, 2, 3];
     const arr2 = [1, 2, 3, 4];
     const arr3 = [1, 2, 3, 4];
