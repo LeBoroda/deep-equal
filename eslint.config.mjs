@@ -8,10 +8,10 @@ export default defineConfig([
   eslintRecommended,
   globalIgnores(['./dist/*.js']),
   {
-    files: ['**/*.{js,mjs,cjs}'],
+    files: ['**/*.{js,mjs,cjs,ts,tsx}'],
     plugins: { js },
     extends: ['js/recommended'],
-    languageOptions: { globals: globals.browser },
+    languageOptions: { globals: globals.node },
     rules: {
       semi: ['error', 'always'],
       'no-useless-escape': ['error', { allowRegexCharacters: ['-'] }],
