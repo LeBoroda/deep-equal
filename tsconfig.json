@@ -44,7 +44,8 @@
     // Temporary transition Options
     "allowJs": true,
     "checkJs": false,
-    "noEmit": true
+    "noEmit": true,
+    "esModuleInterop": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist", "**/*.test.js", "**/*.config.*"]
