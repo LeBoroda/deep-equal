@@ -1,7 +1,7 @@
 import { DateComparator } from './date-comparator.js';
 
 describe('Date Comparator Tests', () => {
-  let dateComparator:DateComparator;
+  let dateComparator: DateComparator;
 
   beforeEach(() => {
     dateComparator = new DateComparator();
@@ -15,6 +15,6 @@ describe('Date Comparator Tests', () => {
     const date3 = new Date('2323-01-12');
     expect(dateComparator.compare(date1, date2)).toBeFalsy();
     expect(dateComparator.compare(date2, date3)).toBeTruthy();
-		expect(()=>dateComparator.compare(date1, '2323-01-11' as any) ).toThrow();
+    expect(() => dateComparator.compare(date1, '2323-01-11' as any)).toThrow();
   });
 });

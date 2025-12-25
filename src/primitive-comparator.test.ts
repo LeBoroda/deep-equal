@@ -1,7 +1,7 @@
 import { PrimitiveComparator } from './primitive-comparator.js';
 
 describe('Primitive values comparator test', () => {
-  let primComparator : PrimitiveComparator;
+  let primComparator: PrimitiveComparator;
   beforeEach(() => {
     primComparator = new PrimitiveComparator();
   });

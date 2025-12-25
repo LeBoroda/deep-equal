@@ -4,7 +4,7 @@ import { ArrayComparator } from './array-comparator.js';
 import { ObjectComparator } from './object-comparator.js';
 
 describe('Deep Equal Engine tests', () => {
-  let engine : DeepEqualEngine;
+  let engine: DeepEqualEngine;
 
   beforeEach(() => {
     engine = new DeepEqualEngine();
@@ -36,7 +36,7 @@ describe('Deep Equal Engine tests', () => {
   });
 
   it('should handle recursive links', () => {
-    const obj : any = { a: 'test' };
+    const obj: any = { a: 'test' };
     obj.self = obj;
 
     expect(engine.deepEqual(obj, obj.self)).toBeTruthy();

@@ -1,7 +1,7 @@
 import { AbsComparator } from './abs-comparator.js';
 
 describe('Abstract class tests', () => {
-  let absComparator : AbsComparator;
+  let absComparator: AbsComparator;
   beforeEach(() => {
     absComparator = new AbsComparator();
   });

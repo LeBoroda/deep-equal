@@ -1,15 +1,17 @@
 import { AbsComparator } from './abs-comparator.js';
-import type {DeepEqualEngine} from "./deep-equal-engine.js";
+import type { DeepEqualEngine } from './deep-equal-engine.js';
 
 export class ArrayComparator extends AbsComparator {
-  canHandle(value : unknown): boolean {
+  canHandle(value: unknown): boolean {
     return Array.isArray(value);
   }
 
-  compare(a: unknown[], b: unknown[], context : DeepEqualEngine): boolean {
+  compare(a: unknown[], b: unknown[], context: DeepEqualEngine): boolean {
     if (!Array.isArray(b) || a.length !== b.length) {
       return false;
     }
-    return a.every((item: unknown, index : number) : boolean => context.deepEqual(item, b[index]));
+    return a.every((item: unknown, index: number): boolean =>
+      context.deepEqual(item, b[index]),
+    );
   }
 }

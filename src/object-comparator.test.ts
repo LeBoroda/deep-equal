@@ -2,7 +2,7 @@ import { ObjectComparator } from './object-comparator.js';
 
 describe('Object Comparator tests', () => {
   let objectComparator: ObjectComparator;
-  let mockContext:any;
+  let mockContext: any;
 
   beforeEach(() => {
     objectComparator = new ObjectComparator();
