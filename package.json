@@ -2,9 +2,9 @@
   "name": "deep-equal",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node src/index.js",
     "test": "jest",
     "lint": "prettier --check . && eslint .",
     "lint:fix": "prettier --write . && eslint . --fix"
@@ -29,6 +29,7 @@
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^30.2.0",
     "prettier": "^3.7.4",
+    "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
 }
